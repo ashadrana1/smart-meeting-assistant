@@ -6,6 +6,12 @@ import StreamProvider from "@/app/components/stream-provider";
 import MeetingRoom from "@/app/components/meeting-room";
 import { StreamTheme } from "@stream-io/video-react-sdk";
 
+export async function generateStaticParams() {
+  return [
+    { id: "demo-meeting-room" }
+  ];
+}
+
 export default function MeetingPage() {
   const params = useParams();
   const router = useRouter();
